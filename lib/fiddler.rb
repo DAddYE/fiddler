@@ -19,8 +19,7 @@ module Fiddler
   LIBPATHS =
     [ '/usr/local/lib',
       '/opt/local/lib',
-      '/usr/lib64',
-      File.expand_path("../../ext/leveldb", __FILE__)]
+      '/usr/lib64']
 
   def dlload(*libs)
     libs.map! do |lib|
