@@ -7,7 +7,7 @@ of **RUBY 2.+**.
 
 Add this line to your application's Gemfile:
 
-    gem 'fiddler'
+    gem 'fiddler-rb', require: 'fiddler'
 
 And then execute:
 
@@ -15,7 +15,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install fiddler
+    $ gem install fiddler-rb
 
 ## Usage
 

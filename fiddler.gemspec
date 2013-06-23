@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'fiddler/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "fiddler"
+  spec.name          = "fiddler-rb"
   spec.version       = Fiddler::VERSION
   spec.authors       = ["Davide D'Agostino"]
   spec.email         = ["info@daddye.it"]
