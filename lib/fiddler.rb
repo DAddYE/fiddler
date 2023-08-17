@@ -35,12 +35,8 @@ module Fiddler
     const_set $1, const_get(c)
   end
 
-  ULONG  = -LONG
   LLONG  =  LONG_LONG
   ULLONG = -LONG_LONG
-  UCHAR  = -CHAR
-  USHORT = -SHORT
-  UINT   = -INT
 
   def cdef(name, ret_type, args_types={}, options={})
     address     = handler["#{@_prefix}#{name}"] || handler[name.to_s]
@@ -48,7 +44,7 @@ module Fiddler
     call_type   = options.delete(:call_type) || Function::DEFAULT
     params      = args_types.keys.join(', ')
     values      = args_types.values
-    cdefs[name] = Function.new(address, values, ret_type, call_type, options)
+    cdefs[name] = Function.new(address, values, ret_type, call_type, **options)
 
     module_eval <<-RB, __FILE__, __LINE__ + 1
     def #{name}(#{params})
