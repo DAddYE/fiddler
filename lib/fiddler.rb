@@ -35,12 +35,8 @@ module Fiddler
     const_set $1, const_get(c)
   end
 
-  ULONG  = -LONG
   LLONG  =  LONG_LONG
   ULLONG = -LONG_LONG
-  UCHAR  = -CHAR
-  USHORT = -SHORT
-  UINT   = -INT
 
   def cdef(name, ret_type, args_types={}, options={})
     address     = handler["#{@_prefix}#{name}"] || handler[name.to_s]
